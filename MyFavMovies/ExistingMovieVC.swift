@@ -17,7 +17,6 @@ class ExistingMovieVC: UIViewController {
 	@IBOutlet weak var movieImage: UIImageView!
 	@IBOutlet weak var movieRating: UITextField!
 	
-	
 	// CORE DATA VARIABLES
 //	@NSManaged var title: String?
 //	@NSManaged var image: NSData?
@@ -25,10 +24,12 @@ class ExistingMovieVC: UIViewController {
 //	@NSManaged var link: String?
 //	@NSManaged var rating: String?
 	
-	
+    var movies = Movies()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+        
+        print(movies.title)
 	}
 	
 	

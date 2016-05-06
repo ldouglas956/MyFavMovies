@@ -65,6 +65,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return movies.count
 	}
-	
+    
+    // MARK: Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "ExistingMovie" {
+                if let destination = segue.destinationViewController as? ExistingMovieVC, selectedIndex = movieTable.indexPathForCell(sender as! UITableViewCell) {
+                    destination.movies = movies[selectedIndex.row]
+                }
+            }
+        }
+    }
 }
 
