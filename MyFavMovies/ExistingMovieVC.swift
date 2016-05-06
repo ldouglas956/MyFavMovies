@@ -24,12 +24,10 @@ class ExistingMovieVC: UIViewController {
 //	@NSManaged var link: String?
 //	@NSManaged var rating: String?
 	
-    var movies = Movies()
+	
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(movies.title)
 	}
 	
 	
